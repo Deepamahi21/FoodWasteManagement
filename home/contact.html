@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Contact-Us </title>
+    <link rel="stylesheet" href="contact.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="assets/css/styles.css">
+     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
+     <script defer src="./contact.js"></script>
+     
+   </head>
+<body>
+
+  <header class="l-header">
+    <nav class="nav bd-grid">
+        
+        <div class="nav__toggle" id="nav-toggle">
+            <i class='bx bx-menu'></i>
+        </div>
+        <div class="nav__menu" id="nav-menu">
+            <div class="nav__close" id="nav-close">
+                <i class='bx bx-x'></i>
+            </div>
+
+            <ul class="nav__list">
+                <li class="nav__item"><a href="./landing.html" class="nav__link active">Home</a></li>
+                <li class="nav__item"><a href="./services.html" class="nav__link">Services</a></li>
+                <li class="nav__item"><a href="ready_donate.html" class="nav__link">Ready To Donate</a></li>
+                        <li class="nav__item"><a href="ready_receive.html" class="nav__link">Ready To Receive</a></li>
+                <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+            </ul>
+        </div>
+        <li onclick="logOut()" class="nav__item signout-btn"><a href="#" class="nav__link active">SignOut</a></li>    </nav>
+</header>
+  <div class="container">
+    <div class="content">
+      <div class="image-box">
+        <img src="contact-us.gif" alt="">
+      </div>
+    <form action="#">
+      <div class="topic">Send us a message</div>
+      <div class="input-box">
+        <input type="text" required id="name">
+        <label>Enter your name</label>
+      </div>
+      <div class="input-box">
+        <input type="text" required id="email">
+        <label>Enter your email</label>
+      </div>
+      <div class="message-box">
+        <textarea id="message"></textarea>
+        <!-- <input type="text" required id="message"> -->
+        <label>Enter your message</label>
+      </div>
+      <div class="input-box">
+        <input type="submit" value="Send Message" onclick="contact()">
+      </div>
+    </form>
+  </div>
+  </div>
+
+</body>
+</html>

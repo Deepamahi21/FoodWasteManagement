@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
+    <script src="./receive.js"></script>
+    <link rel="stylesheet" href="receive.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Document</title>
+    
+  </head>
+  <body>
+    <header class="l-header">
+      <nav class="nav bd-grid">
+          
+          <div class="nav__toggle" id="nav-toggle">
+              <i class='bx bx-menu'></i>
+          </div>
+          <div class="nav__menu" id="nav-menu">
+              <div class="nav__close" id="nav-close">
+                  <i class='bx bx-x'></i>
+              </div>
+  
+              <ul class="nav__list">
+                  <li class="nav__item"><a href="./landing.html" class="nav__link active">Home</a></li>
+                  <li class="nav__item"><a href="./services.html" class="nav__link">Services</a></li>
+                  <li class="nav__item"><a href="ready_donate.html" class="nav__link">Ready To Donate</a></li>
+                        <li class="nav__item"><a href="ready_receive.html" class="nav__link">Ready To Receive</a></li>
+                  <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+              </ul>
+          </div>
+          <li onclick="logOut()" class="nav__item signout-btn"><a href="#" class="nav__link active">SignOut</a></li>
+      </nav>
+  </header>
+  <div id="dummy"></div>
+  <div class="jumbotron d-flex justify-content-center" style="background-color: #e0a1a2;">
+    <div class="row">
+      <div class="col-sm-12 col-md-8">
+        <h3 class="display-4">Hey, are you ready to Receive the Food!!</h3>
+        <p class="lead">Then start filling the below form .</p>
+        
+      </div>
+    </div>
+    
+  </div>
+  <div class="editor-page">
+    <div class="container page">
+      <div class="row">
+        <div class="col-md-10 offset-md-1 col-xs-12">
+          <form >
+            <fieldset >
+              <fieldset class="form-group">
+                <input class="form-control"
+                  type="text" 
+                  placeholder="Organization Name"
+                  style="background-color: #f7c2c3; color: white;"
+                   id="organization-name"/>
+              </fieldset>
+              <fieldset class="form-group">
+                <select class="form-control" aria-label="Default select example " style="background-color: #f7c2c3; color: grey;" id="organization-type">
+                  <option selected>Organization Type</option>
+                  <option value="orphanages">Orphanages</option>
+                  <option value="companies">Companies</option>
+                </select>
+              </fieldset>
+              <fieldset class="form-group">
+                <input class="form-control"
+                  type="text"
+                  placeholder="Capacity"
+                  style="background-color: #f7c2c3; color: white;"
+                   id="capacity"/>
+              </fieldset>
+              <fieldset class="form-group">
+                <input class="form-control"
+                  type="text"
+                  placeholder="Location"
+                  style="background-color: #f7c2c3; color: white;"
+                   id="location"/>
+              </fieldset>
+              
+              
+              <fieldset class="form-group">
+                <input class="form-control"
+                  type="text"
+                  placeholder="City"
+                  style="background-color: #f7c2c3; color: white;"
+                   id="city"/>
+                   
+              </fieldset>
+              <fieldset class="form-group">
+                <input class="form-control"
+                  type="text"
+                  placeholder="Mobile Number"
+                  style="background-color: #f7c2c3; color: white;"
+                   id="mobile-number"/>
+                   
+              </fieldset>
+  
+              <button class="btn btn-lg pull-xs-right btn-primary" id="foot" type="button" onclick="receive()">
+                Submit
+              </button>
+  
+            </fieldset>
+          </form>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  
+  
+  
+  <footer class="site-footer" id="about">
+        
+    <div class="container">
+      <hr>
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify"><b>Help Other People Eat</b> provide the right channels for compassionate citizens to begin and manage initiatives, that solve for hunger locally. Our mission is to make India hunger free.</p>
+        </div>
+
+
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="./landing.html">Home</a></li>
+            <li><a href="services.html" >Services</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    
+</footer>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
+    <script defer src="./ready_donate.js"></script>
+    <link rel="stylesheet" href="ready_donate.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x'></i>
+                </div>
+
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="./landing.html" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="./services.html" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Ready To Donate</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Ready To Receive</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                    
+                </ul>
+            </div>
+            <li onclick="logOut()" class="nav__item signout-btn"><a href="#" class="nav__link active">SignOut</a></li>
+        </nav>
+    </header>
+
+    <div class="dummy"></div>
+    <div class="container-fluid" id="donationList">
+        
+    </div>
+</body>
+</html>
